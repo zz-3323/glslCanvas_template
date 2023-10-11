@@ -1,3 +1,4 @@
+/*
 // Author:CMH
 // Title:BreathingGlow+noise
 
@@ -81,6 +82,7 @@ void main() {
     float glow_circle = glow(circle_dist, strength, thickness);
     gl_FragColor = vec4((vec3(glow_circle)+fog)*dir*vec3(1.0, 0.5, 0.25),1.0);
 }
+*/
 
 
 
@@ -88,7 +90,6 @@ void main() {
 
 
 
-/*
 // Author:CMH
 // Title:BreathingGlow
 #ifdef GL_ES
@@ -127,4 +128,4 @@ void main() {
     float glow_circle = glow(circle_dist, strength, thickness);
     gl_FragColor = vec4(vec3(glow_circle)*vec3(1.0, 0.5, 0.25),1.0);
 }
-*/
+
