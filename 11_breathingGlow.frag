@@ -16,7 +16,9 @@ void main() {
     vec2 uv = gl_FragCoord.xy/u_resolution.xy;
     uv.x *= u_resolution.x/u_resolution.y;
     uv= uv*2.0-1.0;
-    
+
+    float pi=3.14159;
+
     //定義圓環
     float dist = length(uv);
     float circle_dist = abs(dist-0.512);								//光環大小
