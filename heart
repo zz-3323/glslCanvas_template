@@ -2,9 +2,9 @@
 precision mediump float; 
 #endif 
 
-uniform vec2 u_resolution; 
-uniform vec2 u_mouse; 
-uniform float u_time; 
+uniform vec2 u_resolution;  // Canvas size (width,height)
+uniform vec2 u_mouse;       // mouse position in screen pixels
+uniform float u_time;       // Time in seconds since load
 
 float glow(float d, float str, float thickness) 
 { 
@@ -53,5 +53,14 @@ void main()
     float breathing = (exp(sin(u_time / (2.0 * 3.14159))) - 0.36787944) * 0.42545906412;
     float strength = (0.060 * breathing + 0.1); float thickness = (0.1 * breathing + 0.1); 
     float glow_circle = glow(dist, strength, thickness); 
-    gl_FragColor = vec4((vec3(glow_circle) + fog) * vec3(1.0, 0.5, 0.25), 1.0); 
+    gl_FragColor = vec4((vec3(glow_circle) + fog) * vec3(0.559,0.971,1.000), 0.720); 
 }
+
+
+
+
+
+
+
+
+
